@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec666ddf8659eb05bec3d37157ec0c34",
+    "revision": "5dd6e66ecaa6868111c0184bcd72c57c",
     "url": "/Evaly/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Evaly/static/css/2.c374b366.chunk.css"
   },
   {
-    "revision": "9dc64643da017b7fe73b",
+    "revision": "ddcdaba4be3062eaf2ee",
     "url": "/Evaly/static/css/main.ac02b949.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Evaly/static/js/2.455b3d3b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9dc64643da017b7fe73b",
-    "url": "/Evaly/static/js/main.b68ef469.chunk.js"
+    "revision": "ddcdaba4be3062eaf2ee",
+    "url": "/Evaly/static/js/main.b16d68fe.chunk.js"
   },
   {
     "revision": "c00f3b49474f18e0cf8a",
