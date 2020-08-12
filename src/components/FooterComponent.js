@@ -8,8 +8,8 @@ function Footer(props)
         
         <div className="footer">
             <div className="container">
-                <div className="row align-items-center">             
-                    <div className="col-12 offset-1 col-sm-2">
+                <div className="row align-items-center offset-md-1">             
+                    <div className="col-12 col-sm-2">
                         <h5>Menu</h5>
                         <ul className="list-unstyled">
                             <li><a href="#">Privacy Policy</a></li>
@@ -18,7 +18,7 @@ function Footer(props)
                             <li><a href="#">Terms and Conditions</a></li>
                         </ul>
                     </div>
-                    <div className="col-12 offset-1 col-sm-4">
+                    <div className="col-12 col-sm-4">
                         <h5>Our Address</h5>
                         <address>
                           House #8 (1st Floor), Road # 14,<br/>
@@ -30,7 +30,7 @@ function Footer(props)
                        </address>
                        <br/>
                     </div>
-                    <div className="col-12 offset-1 col-sm-3">
+                    <div className="col-12 col-sm-3">
                         <h5>Get in Touch</h5>
                         <div className="align-self-center">
                             <a className="btn btn-social-icon btn-google" href="http://google.com/+"><i className="fa fa-google-plus"></i></a>

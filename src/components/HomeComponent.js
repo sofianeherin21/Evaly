@@ -12,28 +12,37 @@ class Home extends Component{
 		{
 			
 		};
-	}	
+	}
 
-	renderCategory(lists)
-	{
-		if(lists)
+	renderItem(items){
+		
+		if(items)
 		{
+			const pro=items.map((item)=>{
+				return(
+					<Card className="col-6 col-md-3" style={{height:"20rem"}}>
+						
+						<CardBody>
+							<CardImg style={{height:"70%"}} src={item.img} className="card-top img-responsive img-fluid" alt={item.name}/>
+							<CardTitle><h6>{item.name}</h6></CardTitle>
+							<p>৳{item.price}</p>
+						</CardBody>
+					</Card>
+					);
+			});
+			return(
 
-			const category = lists.map((cat) =>{
-					
-					return(
-						<div>
-							<ListGroupItem>{cat.name} <span className="fa fa-angle-right pull-right"></span></ListGroupItem>
-						</div>
-	                  );
+				<div className="row">
+					{pro}
+				</div>
 
-				});
+			);
 		}
 		else{
 			return(
-			<div>Data Not Found</div>);
+				<div></div>);
 		}
-	}
+	}	
 
 	render()
 	{
@@ -60,17 +69,20 @@ class Home extends Component{
 
 					<Card style={{height:"15em"},{overflow:"hidden"}} className="col-12 col-md-6">
 		                <div className="row">
-		                    <div className="col-8">
+		                    <div className="card-left">
 		                        <CardBody>
+
 		                            <p>{item.brand}<span className="badge badge-primary"> NEW</span></p>
 		                            <h6 className="card-title text-md">{item.name}</h6>
-		                            <p className="text-sm text-gray-600">{item.category}<br/>
+		                            <CardImg style={{height:"20%"},{padding:"0"},{width:"20%"}} className="ml-auto img-responsive img-fluid" src={item.img}/>
+		                            <p className="col-5 text-sm text-gray-600">{item.category}<br/>
 		                    	        Starting at<br/>
 		                        	    ৳ {item.price}
 		                            </p>
 		                        </CardBody>
+		                        
 		                    </div>
-		                    <CardImg style={{height:"20%"},{padding:"0"}} className="col-4 img-responsive img-fluid" src={item.img}/>
+		                    
 		                </div>
 		            </Card>
 
@@ -86,6 +98,18 @@ class Home extends Component{
 				<div className="col-6 col-md-4 row-content">
 	                <img src={shop.img} className="d-block img-responsive img-fluid"/>
 	            </div>
+
+			);
+	});
+
+	const products= this.props.products.map((product)=>{
+		return(
+
+			<div className="container">
+				<h3>{product.category}</h3>
+				{this.renderItem(product.items)}
+			</div>
+
 
 			);
 	});
@@ -128,6 +152,12 @@ class Home extends Component{
 			    <div className="container">
 	        		<div className="row">
 	        			{shops}
+	        		</div>
+	        	</div>
+
+	        	<div className="container">
+	        		<div className="row">
+	        			{products}
 	        		</div>
 	        	</div>
 	        </React.Fragment>

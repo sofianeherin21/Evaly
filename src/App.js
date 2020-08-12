@@ -7,6 +7,7 @@ import { CATEGORIES } from './shared/Categories';
 import { ADS } from './shared/Ads';
 import { Highlights } from './shared/Highlights';
 import { SHOPS } from './shared/Shops';
+import { PRODUCTS } from './shared/Products';
 
 class App extends Component {
 
@@ -18,7 +19,8 @@ class App extends Component {
 	      lists:CATEGORIES,
 	      ads:ADS,
 	      highlights:Highlights,
-	      shops:SHOPS
+	      shops:SHOPS,
+	      products:PRODUCTS
 	    };
 	  }
 	  render(){
@@ -26,7 +28,7 @@ class App extends Component {
 	  	return (
 		    <div className="App">
 		      <Header/>
-		      <Home lists={this.state.lists}  ads={this.state.ads} items={this.state.highlights} shops={this.state.shops}/>
+		      <Home lists={this.state.lists}  ads={this.state.ads} items={this.state.highlights} shops={this.state.shops} products={this.state.products}/>
 		      <Footer/>
 		    </div>
 		  );

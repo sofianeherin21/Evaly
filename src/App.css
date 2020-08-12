@@ -1,7 +1,11 @@
-
+.card img{
+    float: right;
+    position: relative;
+    margin-left: 20em;
+}
 .container {
     max-width: 90em;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
 }
 
@@ -115,10 +119,11 @@ body {
     }
 
     #myCarousel{
-        margin-top: 5rem;
+        margin-top: 7rem;
     }
     .footer{
         height: 40em;
+        text-align: center;
     }
     .input-group{
         width: 80%;
@@ -129,6 +134,16 @@ body {
         margin-right: auto;
         padding-left: 0px
 
+    }
+    .card h6,h5,p{
+        font-size: 12px;
+    }
+    .card{
+        max-height: 10em;
+        overflow: hidden;
+    }
+    .card img{
+        height: 15%;
     }
         
 
@@ -152,7 +167,7 @@ body {
     }
     #myCarousel{
     
-        min-height: 25em;
+        min-height: 10em;
     }
 
 }
