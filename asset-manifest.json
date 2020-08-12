@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd94e5cc.chunk.css",
-    "main.js": "/static/js/main.38604c83.chunk.js",
-    "main.js.map": "/static/js/main.38604c83.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f692aab3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f692aab3.js.map",
-    "static/css/2.bb8d3ec5.chunk.css": "/static/css/2.bb8d3ec5.chunk.css",
-    "static/js/2.704094fe.chunk.js": "/static/js/2.704094fe.chunk.js",
-    "static/js/2.704094fe.chunk.js.map": "/static/js/2.704094fe.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.0d571a00b1a0234f4133a14933af4909.js": "/precache-manifest.0d571a00b1a0234f4133a14933af4909.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.bb8d3ec5.chunk.css.map": "/static/css/2.bb8d3ec5.chunk.css.map",
-    "static/css/main.dd94e5cc.chunk.css.map": "/static/css/main.dd94e5cc.chunk.css.map",
-    "static/js/2.704094fe.chunk.js.LICENSE.txt": "/static/js/2.704094fe.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.css": "/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/Evaly/static/css/main.dd94e5cc.chunk.css",
+    "main.js": "/Evaly/static/js/main.c4a935c6.chunk.js",
+    "main.js.map": "/Evaly/static/js/main.c4a935c6.chunk.js.map",
+    "runtime-main.js": "/Evaly/static/js/runtime-main.33ee8b4e.js",
+    "runtime-main.js.map": "/Evaly/static/js/runtime-main.33ee8b4e.js.map",
+    "static/css/2.c374b366.chunk.css": "/Evaly/static/css/2.c374b366.chunk.css",
+    "static/js/2.704094fe.chunk.js": "/Evaly/static/js/2.704094fe.chunk.js",
+    "static/js/2.704094fe.chunk.js.map": "/Evaly/static/js/2.704094fe.chunk.js.map",
+    "index.html": "/Evaly/index.html",
+    "precache-manifest.2c56400275d0e299d1eba98def985d9a.js": "/Evaly/precache-manifest.2c56400275d0e299d1eba98def985d9a.js",
+    "service-worker.js": "/Evaly/service-worker.js",
+    "static/css/2.c374b366.chunk.css.map": "/Evaly/static/css/2.c374b366.chunk.css.map",
+    "static/css/main.dd94e5cc.chunk.css.map": "/Evaly/static/css/main.dd94e5cc.chunk.css.map",
+    "static/js/2.704094fe.chunk.js.LICENSE.txt": "/Evaly/static/js/2.704094fe.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/Evaly/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.f692aab3.js",
-    "static/css/2.bb8d3ec5.chunk.css",
+    "static/js/runtime-main.33ee8b4e.js",
+    "static/css/2.c374b366.chunk.css",
     "static/js/2.704094fe.chunk.js",
     "static/css/main.dd94e5cc.chunk.css",
-    "static/js/main.38604c83.chunk.js"
+    "static/js/main.c4a935c6.chunk.js"
   ]
 }
