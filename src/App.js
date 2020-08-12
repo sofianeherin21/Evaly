@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
+import Home from './components/HomeComponent';
+import { CATEGORIES } from './shared/Categories';
+import { ADS } from './shared/Ads';
+import { Highlights } from './shared/Highlights';
+import { SHOPS } from './shared/Shops';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+	constructor(props)
+	  {
+	    super(props)
+	    this.state=
+	    {
+	      lists:CATEGORIES,
+	      ads:ADS,
+	      highlights:Highlights,
+	      shops:SHOPS
+	    };
+	  }
+	  render(){
+
+	  	return (
+		    <div className="App">
+		      <Header/>
+		      <Home lists={this.state.lists}  ads={this.state.ads} items={this.state.highlights} shops={this.state.shops}/>
+		      <Footer/>
+		    </div>
+		  );
+
+	  }
+  
 }
 
 export default App;

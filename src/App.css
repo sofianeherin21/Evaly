@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+
+.container {
+    max-width: 90em;
+    margin-top: 2rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nav {
+    margin-top: 3rem;
+    padding-left:3rem;
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.red-border {
+    border-color: #B22222;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-danger{
+    background-color: #B22222;
+    color: white;
+    padding:5em,5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row-header {
+    margin: 0px auto;
+    padding: 0, 0;
+}
+
+.row-content {
+    margin: 0px,auto;
+    padding: 5em, 0em,0em,0em;
+    border-bottom: 1px ridge;
+    min-height: 10em;
+}
+
+.footer {
+    padding-top: 5em;
+    height: 30em;
+    background-color: rgb(51, 62, 79);
+    color: rgb(156, 169, 190);
+    opacity: 0.9;
+    margin: 7rem auto;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.jumbotron {
+    margin: 0px auto;
+    padding: 70px, 30px;
+    margin-top: 0px;
+    color: floralwhite;
+    opacity: .9;
+}
+
+address {
+    font-size: 80%;
+    margin: 0px;
+    color: rgb(156, 169, 190);
+}
+
+body {
+    background-color: #f5f6f7;
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-light {
+    background-color: #FFFF;
+}
+
+.nav-item {
+    margin: 0em 1em;
+}
+
+
+
+.modal .modal-header {
+    background: #512DA8;
+    color: floralwhite;
+}
+
+.modal .modal-body {
+    background: #D1C4E9;
+}
+
+.modal .close {
+    color: floralwhite;
+}
+
+/*small screen*/
+
+@media (max-width: 579px) {
+    #category, #nav, #bottom {
+        display: none;
+    }
+
+    #hidden-notify,#bottom2, #bottom2 .list-unstyled ul, #bottom2 .fa {
+        
+        bottom: 0px;
+        align-content:center;
+        align-items:center;
+        justify-content:center;
+    }
+    #bottom2 .list-unstyled li {
+            display: inline;
+    }
+
+    #myCarousel{
+        margin-top: 5rem;
+    }
+    .footer{
+        height: 40em;
+    }
+    .input-group{
+        width: 80%;
+        margin: 0em;
+        padding-right: 0px;
+    }
+    .input-group-append{
+        margin-right: auto;
+        padding-left: 0px
+
+    }
+        
+
+}
+
+@media (max-width: 991.98px) {
+    .row-content {
+        min-height: 4em;
+    }
+}
+
+
+/*on md-lg screen*/
+
+@media (min-width: 580px) {
+    #hidden-notify {
+        display: none;
+    }
+    .float-right{
+        display:none;
+    }
+    #myCarousel{
+    
+        min-height: 25em;
+    }
+
 }
