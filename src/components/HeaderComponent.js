@@ -71,28 +71,16 @@ render()
 
             
 
-            <div className="container-fluid" id="hidden-notify">
+            <div className="container-fluid fixed-bottom" id="hidden-notify">
 
-                    <Navbar light expand="sm" className="fixed-bottom">
-                        <div className="container">
-
-                            <div id="bottom2">
-                                <Navbar as="ul" className="ml-auto list-unstyled align-items-center">
-                                    <NavItem as="li">
-                                        <NavLink ><span className="fa fa-shopping-cart fa-lg"></span></NavLink>
-                                    </NavItem>
-                                    <NavItem as="li">
-                                        <NavLink className="nav-link" ><span className="fa fa-bell fa-lg"></span></NavLink>
-                                    </NavItem>
-                                    <NavItem as="li">
-                                        <NavLink className="nav-link"><span className="fa fa-comment fa-lg"></span></NavLink>
-                                    </NavItem>
-                                    
-                                </Navbar>
-                            </div>
-
-                        </div>
-                    </Navbar>
+                    
+                    <div className="row" id="bottom2">
+	                    <ul className="list-unstyled align-items-center">
+	                    	<li><span className="fa fa-shopping-cart fa-lg"></span></li>
+	                    	<li><span className="fa fa-bell fa-lg"></span></li>
+	                    	<li><span className="fa fa-comment fa-lg"></span></li>
+	                    </ul>
+	                </div>
                 
 
             </div>
@@ -101,27 +89,19 @@ render()
 
                 <div className="row">
 
-                    <Navbar light className="col-1">
+                    <div className="container">
+	                    <Navbar light expand="sm" className="col-10" >
+	                        <Navbar nav expand="sm" className="list-unstyled">
 
-                        <NavbarToggler onClick={this.toggleNav}/>
-                        <Collapse isOpen={this.state.isNavOpen} navbar id="Navbar">
-                            <Nav navbar classname="mr-auto">
-                                <NavItem className="nav-item active"><NavLink className="nav-link" href="#"><span class="fa fa-home fa-lg"></span>Home</NavLink></NavItem>
-                                <NavItem className="nav-item"><NavLink className="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</NavLink></NavItem>
-                                <NavItem className="nav-item"><NavLink className="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</NavLink></NavItem>
-                                <NavItem className="nav-item"><NavLink className="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</NavLink></NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Navbar>
-                    <Navbar light expand="sm" className="col-11" >
-                        <Navbar nav expand="sm" className="list-unstyled">
-                            <NavItem ><NavLink className="nav-link" href="#"> All Shops</NavLink></NavItem>
-                            <NavItem ><NavLink className="nav-link" href="./aboutus.html"> Gift Cards</NavLink></NavItem>
-                            <NavItem ><NavLink className="nav-link" href="#"> Campaigns</NavLink></NavItem>
-                            <NavItem ><NavLink className="nav-link" href="./contactus.html"> Premiun Deal</NavLink></NavItem>
-                        </Navbar>
+	                        	<Button className="navbar-light btn-default" type="button"><span className="navbar-toggler-icon"></span></Button>
+	                            <NavItem ><NavLink className="nav-link" href="#"> All Shops</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link" href="./aboutus.html"> Gift Cards</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link" href="#"> Campaigns</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link" href="./contactus.html"> Premiun Deal</NavLink></NavItem>
+	                        </Navbar>
 
-                    </Navbar>
+	                    </Navbar>
+	                </div>
 
 
                 </div>

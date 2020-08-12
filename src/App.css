@@ -108,14 +108,15 @@ body {
     }
 
     #hidden-notify,#bottom2, #bottom2 .list-unstyled ul, #bottom2 .fa {
-        
+        background-color: white;
         bottom: 0px;
-        align-content:center;
-        align-items:center;
         justify-content:center;
+        padding-top: 0.5em;
+
     }
     #bottom2 .list-unstyled li {
             display: inline;
+            padding: 2em;
     }
 
     #myCarousel{
