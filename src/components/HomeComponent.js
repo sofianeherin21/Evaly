@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { ListGroup, ListGroupItem,Card,CardBody,CardImg,CardTitle,CardOverlay } from 'reactstrap';
+import { ListGroup, ListGroupItem,Card,CardBody,CardImg,CardTitle } from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -20,7 +20,7 @@ class Home extends Component{
 		{
 			const pro=items.map((item)=>{
 				return(
-					<Card className="col-6 col-md-3" style={{height:"20rem"}}>
+					<Card key={item.id} className="col-6 col-md-3" style={{height:"20rem"}}>
 						
 						<CardBody>
 							<CardImg style={{height:"70%"}} src={item.img} className="card-top img-responsive img-fluid" alt={item.name}/>
@@ -50,7 +50,7 @@ class Home extends Component{
 		const category = this.props.lists.map((cat) =>{
 					
 					return(
-						<ListGroupItem>{cat.name} <span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+						<ListGroupItem key={cat.id}>{cat.name} <span className="fa fa-angle-right pull-right"></span></ListGroupItem>
 						
 	                  );
 
@@ -59,7 +59,7 @@ class Home extends Component{
 		const carousel = this.props.ads.map((ad)=>{
 
 			return(
-					<img src={ad.url} className="sliderimg img-responsive img-fluid" alt={ad.name}/>
+					<img key={ad.id} src={ad.img} className="sliderimg img-responsive img-fluid" alt={ad.name}/>
 				);
 		});
 
@@ -67,7 +67,7 @@ class Home extends Component{
 
 			return(
 
-					<Card style={{height:"15em"},{overflow:"hidden"}} className="col-12 col-md-6">
+					<Card key={item.id} style={{height:"15em"},{overflow:"hidden"}} className="col-12 col-md-6">
 		                <div className="row">
 		                    <div className="card-left">
 		                        <CardBody>
@@ -95,8 +95,8 @@ class Home extends Component{
 
 		return(
 
-				<div className="col-6 col-md-4 row-content">
-	                <img src={shop.img} className="d-block img-responsive img-fluid"/>
+				<div key={shop.id} className="col-6 col-md-4 row-content">
+	                <img src={shop.img} className="d-block img-responsive img-fluid" alt="shops"/>
 	            </div>
 
 			);
@@ -105,7 +105,7 @@ class Home extends Component{
 	const products= this.props.products.map((product)=>{
 		return(
 
-			<div className="container">
+			<div key={product.id} className="container">
 				<h3>{product.category}</h3>
 				{this.renderItem(product.items)}
 			</div>
@@ -134,7 +134,7 @@ class Home extends Component{
 			            
 			            <div className="col-12 col-md-9">
 	                		<div className="col-12" id="myCarousel">
-	                			<AliceCarousel dotsDisabled={true} buttonsDisabled={true} autoPlay autoPlayInterval="3000" >
+	                			<AliceCarousel dotsDisabled={true} buttonsDisabled={true} autoPlay autoPlayInterval={3000} >
 									{carousel}
 								</AliceCarousel>
 	                		</div>

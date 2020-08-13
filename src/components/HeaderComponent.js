@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, NavLink, Jumbotron,
-    Button, Input} from 'reactstrap';
+    Navbar, NavbarBrand, Nav,NavItem, NavLink,
+    Button, Input,Popover,PopoverHeader, PopoverBody} from 'reactstrap';
 
 class Header extends Component {
 
@@ -9,9 +9,11 @@ class Header extends Component {
         super(props);
 
         this.toggleNav = this.toggleNav.bind(this);
+        this.togglePopover = this.togglePopover.bind(this);
 
         this.state = {
-            isNavOpen: false
+            isNavOpen: false,
+            isPopoverOpen: false
         };
 
     }
@@ -21,10 +23,16 @@ class Header extends Component {
             isNavOpen: !this.state.isNavOpen
         });
     }
+    togglePopover() {
+        this.setState({
+          isPopoverOpen: !this.state.isPopoverOpen
+        });
+      }
 
 
 render()
 {
+	
     return (
         <React.Fragment>
             <div className="container" id="notification">
@@ -50,16 +58,16 @@ render()
                             <div id="bottom">
                                 <Nav navbar className= "mr-auto">
                                     <NavItem>
-                                        <NavLink ><span className="fa fa-shopping-cart fa-lg"></span></NavLink>
+                                        <NavLink id="Popover1" ><span className="fa fa-shopping-cart fa-lg"></span></NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink className="nav-link" ><span className="fa fa-bell fa-lg"></span></NavLink>
+                                        <NavLink className="nav-link" id="Popover2" ><span className="fa fa-bell fa-lg"></span></NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink className="nav-link"><span className="fa fa-comment fa-lg"></span></NavLink>
+                                        <NavLink className="nav-link" id="Popover3"><span className="fa fa-comment fa-lg"></span></NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink className="nav-link"><span className="fa fa-user fa-lg"></span></NavLink>
+                                        <NavLink className="nav-link" id="Popover4"><span className="fa fa-user fa-lg"></span></NavLink>
                                     </NavItem>
                                 </Nav>
                             </div>
@@ -85,19 +93,19 @@ render()
 
             </div>
 
-            <div classname="container" id="nav">
+            <div className="container" id="nav">
 
                 <div className="row">
 
                     <div className="container">
 	                    <Navbar light expand="sm" className="col-10" >
-	                        <Navbar nav expand="sm" className="list-unstyled">
+	                        <Navbar expand="sm" className="list-unstyled">
 
 	                        	<Button className="navbar-light btn-default" type="button"><span className="navbar-toggler-icon"></span></Button>
-	                            <NavItem ><NavLink className="nav-link" href="#"> All Shops</NavLink></NavItem>
-	                            <NavItem ><NavLink className="nav-link" href="./aboutus.html"> Gift Cards</NavLink></NavItem>
-	                            <NavItem ><NavLink className="nav-link" href="#"> Campaigns</NavLink></NavItem>
-	                            <NavItem ><NavLink className="nav-link" href="./contactus.html"> Premiun Deal</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link"> All Shops</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link"> Gift Cards</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link"> Campaigns</NavLink></NavItem>
+	                            <NavItem ><NavLink className="nav-link"> Premiun Deal</NavLink></NavItem>
 	                        </Navbar>
 
 	                    </Navbar>
@@ -108,6 +116,14 @@ render()
 
 
             </div>
+            <Popover placement="bottom" isOpen={this.state.isPopoverOpen} target="Popover1" toggle={this.togglePopover}>
+		        <PopoverHeader toggle={this.togglePopover}>Cart</PopoverHeader>
+		        <PopoverBody>
+		        	<img src="assets/img/emptycart.png" alt="pic"/>
+		        </PopoverBody>
+		    </Popover>
+
+
 
         </React.Fragment>);
     }

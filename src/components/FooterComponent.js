@@ -26,7 +26,7 @@ function Footer(props)
                           <i className="fa fa-phone fa-lg"></i>: 09638111666<br/>
                           <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br/>
                           <i className="fa fa-envelope fa-lg"></i>: 
-                          <a href="mailto:confusion@food.net">support@evaly.com.bd</a>
+                          <a href="support@evaly.com.bd">support@evaly.com.bd</a>
                        </address>
                        <br/>
                     </div>
