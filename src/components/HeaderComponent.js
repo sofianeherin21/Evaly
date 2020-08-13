@@ -58,7 +58,7 @@ render()
 
                 <div className="row">
 
-                    <Navbar light expand="sm" className="fixed-top">
+                    <Navbar light expand="xs" className="fixed-top">
                         <div className="container">
 
                             <NavbarBrand>
@@ -120,7 +120,7 @@ render()
 	                    <Navbar light expand="sm" className="col-10" >
 	                        <Navbar expand="sm" className="list-unstyled">
 
-	                        	<Button className="navbar-light btn-default" type="button"  isOpen={this.state.isNavOpen} target="" toggle={this.toggleNav}><span className="navbar-toggler-icon"></span></Button>
+	                        	<Button className="navbar-light btn-default" type="button"><span className="navbar-toggler-icon"></span></Button>
 	                            <NavItem ><NavLink className="nav-link"> All Shops</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link"> Gift Cards</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link"> Campaigns</NavLink></NavItem>
