@@ -27,7 +27,7 @@ class App extends Component {
 
 	  	return (
 		    <div className="App">
-		      <Header/>
+		      <Header lists={this.state.lists}/>
 		      <Home lists={this.state.lists}  ads={this.state.ads} items={this.state.highlights} shops={this.state.shops} products={this.state.products}/>
 		      <Footer/>
 		    </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Navbar, NavbarBrand, Nav,NavItem, NavLink,
     Button, Input,Popover,PopoverHeader, PopoverBody} from 'reactstrap';
+import {POPS} from '../shared/Popovers.js' 
 
 class Header extends Component {
 
@@ -13,7 +14,9 @@ class Header extends Component {
 
         this.state = {
             isNavOpen: false,
-            isPopoverOpen: false
+            isPopoverOpen: false,
+            pops:POPS,
+           
         };
 
     }
@@ -28,10 +31,26 @@ class Header extends Component {
           isPopoverOpen: !this.state.isPopoverOpen
         });
       }
+    
+    renderPops=(pop)=>{
+    		return(
+    			
+		        <Popover placement="bottom" triggers="click" isOpen={this.state.isPopoverOpen} target={pop.target} toggle={this.togglePopover}>
+					<PopoverHeader>{pop.title}</PopoverHeader>
+				        <PopoverBody className="offset-3">
+				        	<img src={pop.img} className="img img-responsive img-fluid" alt="pic"/>
+				        	<h6 className="text-align-center">Your Cart is Empty!</h6>
+				        </PopoverBody>
+			    </Popover>
+		    
+		    );
+
+    }
 
 
 render()
 {
+	
 	
     return (
         <React.Fragment>
@@ -58,7 +77,7 @@ render()
                             <div id="bottom">
                                 <Nav navbar className= "mr-auto">
                                     <NavItem>
-                                        <NavLink id="Popover1" ><span className="fa fa-shopping-cart fa-lg"></span></NavLink>
+                                        <NavLink id="Popover1" >{this.renderPops(this.state.pops[0])}<span className="fa fa-shopping-cart fa-lg"></span></NavLink>
                                     </NavItem>
                                     <NavItem>
                                         <NavLink className="nav-link" id="Popover2" ><span className="fa fa-bell fa-lg"></span></NavLink>
@@ -101,7 +120,7 @@ render()
 	                    <Navbar light expand="sm" className="col-10" >
 	                        <Navbar expand="sm" className="list-unstyled">
 
-	                        	<Button className="navbar-light btn-default" type="button"><span className="navbar-toggler-icon"></span></Button>
+	                        	<Button className="navbar-light btn-default" type="button"  isOpen={this.state.isNavOpen} target="" toggle={this.toggleNav}><span className="navbar-toggler-icon"></span></Button>
 	                            <NavItem ><NavLink className="nav-link"> All Shops</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link"> Gift Cards</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link"> Campaigns</NavLink></NavItem>
@@ -116,14 +135,6 @@ render()
 
 
             </div>
-            <Popover placement="bottom" isOpen={this.state.isPopoverOpen} target="Popover1" toggle={this.togglePopover}>
-		        <PopoverHeader toggle={this.togglePopover}>Cart</PopoverHeader>
-		        <PopoverBody>
-		        	<img src="assets/img/emptycart.png" alt="pic"/>
-		        </PopoverBody>
-		    </Popover>
-
-
 
         </React.Fragment>);
     }

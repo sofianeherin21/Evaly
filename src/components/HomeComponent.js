@@ -5,22 +5,14 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 class Home extends Component{
 
-	constructor(props)
-	{
-		super(props);
-		this.state=
-		{
-			
-		};
-	}
-
+	
 	renderItem(items){
 		
 		if(items)
 		{
 			const pro=items.map((item)=>{
 				return(
-					<Card key={item.id} className="col-6 col-md-3" style={{height:"20rem"}}>
+					<Card key={item.id} id="product" className="col-6 col-md-3">
 						
 						<CardBody>
 							<CardImg style={{height:"70%"}} src={item.img} className="card-top img-responsive img-fluid" alt={item.name}/>

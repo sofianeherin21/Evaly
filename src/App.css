@@ -3,18 +3,41 @@
     position: relative;
     margin-left: 20em;
 }
+#sideBar{
+    border-style: ridge;
+    background-color: white;
+    margin-left:0;
+    margin-top: 0; 
+    height: 100%;
+    width: 30%;
+}
 .container {
     max-width: 90em;
     margin-top: 1.5rem;
+    margin-bottom: 1.3rem
 
 }
+.popver{
+    width: 60rem;
+    height: 40rem;
+    padding: 4em;
+}
+.popover img{
 
+    height: 100%;
+    width: 60%;
+}
 #nav {
     margin-top: 3rem;
     padding-left:3rem;
     background-color: white;
 }
-
+#product{
+    
+    
+    height: 20rem;
+    padding: 0px;
+}
 a {
     color: inherit;
 }
@@ -42,12 +65,13 @@ a {
 }
 
 .footer {
+    
     padding-top: 5em;
-    height: 30em;
+    height: 25em;
     background-color: rgb(51, 62, 79);
     color: rgb(156, 169, 190);
     opacity: 0.9;
-    margin: 7rem auto;
+    margin: 20px, 0px,0px,0px;
 }
 
 .tab-content {
@@ -72,6 +96,7 @@ address {
 }
 
 body {
+   
     background-color: #f5f6f7;
     padding: 50px 0px 0px 0px;
     z-index: 0;
