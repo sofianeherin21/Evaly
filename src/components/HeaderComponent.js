@@ -64,15 +64,16 @@ render()
                             <NavbarBrand>
                                 <img src="assets/img/logo.png" height="70" width="90" alt="logo" />
                             </NavbarBrand>
-                            <NavItem className="list-unstyled float-right mr-0">
-                                <NavLink className="nav-link"><span className="fa fa-user fa-lg"></span></NavLink>
-                            </NavItem>
+                            
                             <div className="input-group" >
                                 <Input className="form-control red-border" type="text" placeholder="Search" aria-label="Search" />
                             </div>
                             <div className="input-group-append">
                                 <Button type="submit" className=" btn btn-danger btn-lg input-group-text"><span className="fa fa-search"></span></Button>
                             </div>
+                            <NavItem className="list-unstyled float-right mr-0">
+                                <NavLink className="nav-link"><span className="fa fa-user fa-lg"></span></NavLink>
+                            </NavItem>
 
                             <div id="bottom">
                                 <Nav navbar className= "mr-auto">
