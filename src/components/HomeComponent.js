@@ -1,40 +1,11 @@
 import React, {Component} from 'react';
-import { ListGroup, ListGroupItem,Card,CardBody,CardImg,CardTitle } from 'reactstrap';
+import { ListGroup, ListGroupItem,Card,CardBody,CardImg } from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
+
 class Home extends Component{
-
 	
-	renderItem(items){
-		
-		if(items)
-		{
-			const pro=items.map((item)=>{
-				return(
-					<Card key={item.id} id="product" className="col-6 col-md-3">
-						
-						<CardBody>
-							<CardImg style={{height:"70%"}} src={item.img} className="card-top img-responsive img-fluid" alt={item.name}/>
-							<CardTitle><h6>{item.name}</h6></CardTitle>
-							<p>৳{item.price}</p>
-						</CardBody>
-					</Card>
-					);
-			});
-			return(
-
-				<div className="row">
-					{pro}
-				</div>
-
-			);
-		}
-		else{
-			return(
-				<div></div>);
-		}
-	}	
 
 	render()
 	{
@@ -87,24 +58,14 @@ class Home extends Component{
 
 		return(
 
-				<div key={shop.id} className="col-6 col-md-4 row-content">
-	                <img src={shop.img} className="d-block img-responsive img-fluid" alt="shops"/>
+				<div key={shop.id} id="shops" className="col-4 col-md-2 row-content">
+	                <img src={shop.img} className="img-responsive img-fluid" alt="shops"/>
 	            </div>
 
 			);
 	});
 
-	const products= this.props.products.map((product)=>{
-		return(
-
-			<div key={product.id} className="container">
-				<h3>{product.category}</h3>
-				{this.renderItem(product.items)}
-			</div>
-
-
-			);
-	});
+	
 		
 
 		return(
@@ -131,7 +92,7 @@ class Home extends Component{
 								</AliceCarousel>
 	                		</div>
 	                		<div className="col-12">
-			                    <div className="row row-content container">
+			                    <div className="row container">
 
 			                        
 			                            {highlights}
@@ -142,16 +103,12 @@ class Home extends Component{
 			         </div>
 			    </div>
 			    <div className="container">
-	        		<div className="row">
+	        		<div className="row shop-row">
 	        			{shops}
 	        		</div>
 	        	</div>
 
-	        	<div className="container">
-	        		<div className="row">
-	        			{products}
-	        		</div>
-	        	</div>
+	        	
 	        </React.Fragment>
 
 		);

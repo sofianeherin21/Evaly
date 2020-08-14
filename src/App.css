@@ -1,8 +1,15 @@
-.card img{
+.card-left img{
     float: right;
     position: relative;
-    margin-left: 20em;
+   
 }
+#prodetail img{
+     padding-left: 10%;
+     padding-right: 10%;
+     overflow: hidden;
+
+}
+
 #sideBar{
     border-style: ridge;
     background-color: white;
@@ -32,8 +39,7 @@
     background-color: white;
 }
 #product{
-    
-    
+        
     height: 20rem;
     padding: 0px;
 }
@@ -50,17 +56,31 @@ a {
     color: white;
     padding:5em,5em;
 }
+.product-row{
+    margin-right: 0.3em;
+    margin-left: 0.3em;
 
+}
+.shop-row{
+    margin-right: 0.2em;
+}
 .row-header {
     margin: 0px auto;
     padding: 0, 0;
 }
 
-.row-content {
-    margin: 0px,auto;
-    padding: 5em, 0em,0em,0em;
+#shops {
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding-right: 0px;
     border-bottom: 1px ridge;
-    min-height: 10em;
+    min-height: 7em;
+    /*max-height: 20em;*/
+}
+#shops img{
+    
+    height: 100%;
+    width: 100%;
 }
 
 .footer {
@@ -111,18 +131,6 @@ body {
 
 
 
-.modal .modal-header {
-    background: #512DA8;
-    color: floralwhite;
-}
-
-.modal .modal-body {
-    background: #D1C4E9;
-}
-
-.modal .close {
-    color: floralwhite;
-}
 
 /*small screen*/
 
@@ -150,6 +158,16 @@ body {
         height: 40em;
         text-align: center;
     }
+    #shops{
+        min-height: 3em;
+    }
+    #shops img{
+
+        max-height: 4em;
+        max-width: 100%;
+        display: block;
+        
+    }
     .input-group{
         width: 80%;
         margin: 0em;
@@ -160,14 +178,14 @@ body {
         padding-left: 0px
 
     }
-    .card h6,h5,p{
+    #product h6,h5,p{
         font-size: 12px;
     }
-    .card{
+    #product{
         max-height: 10em;
         overflow: hidden;
     }
-    .card img{
+    #product img{
         height: 15%;
     }
         
