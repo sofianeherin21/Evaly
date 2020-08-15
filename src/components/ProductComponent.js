@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Card,CardBody,CardImg,CardTitle } from 'reactstrap';
 import ProductDetail from './ProductDetailsComponent';
+import { Link } from 'react-router-dom'
 
 class Product extends Component{
 

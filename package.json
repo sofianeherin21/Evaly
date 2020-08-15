@@ -1,5 +1,5 @@
 {
-  "homepage":"https://sofianeherin21.github.io/Evaly",
+  
   "name": "evaly",
   "version": "0.1.0",
   "private": true,
@@ -14,12 +14,12 @@
     "react": "^16.13.1",
     "react-alice-carousel": "^1.19.3",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.5.1"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

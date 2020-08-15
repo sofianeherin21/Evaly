@@ -1,3 +1,11 @@
+.lukao{
+    z-index: 50;
+    padding-left:1rem;
+    padding-top: 1rem;
+
+    
+}
+
 .card-left img{
     float: right;
     position: relative;
@@ -9,7 +17,10 @@
      overflow: hidden;
 
 }
-
+.link{
+    padding: 0;
+    margin:0;
+}
 #sideBar{
     border-style: ridge;
     background-color: white;
@@ -152,7 +163,12 @@ body {
     }
 
     #myCarousel{
-        margin-top: 7rem;
+        margin-top: 5rem;
+    }
+    #notificationbar
+    {
+        margin-top: 3.3rem;
+        padding: 0rem;
     }
     .footer{
         height: 40em;
@@ -205,7 +221,7 @@ body {
     #hidden-notify {
         display: none;
     }
-    .float-right{
+    .float-right,.lukao{
         display:none;
     }
     #myCarousel{
