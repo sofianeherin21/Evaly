@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc23170893a3510512a945fc0139f8a1",
+    "revision": "eaea07fddfe75dd32932f6dc204ad09b",
     "url": "/Evaly/index.html"
   },
   {
-    "revision": "886a0b5b33a86774bba3",
+    "revision": "a697a88fc25a88a45888",
     "url": "/Evaly/static/css/2.c374b366.chunk.css"
   },
   {
-    "revision": "1da3c65bb81390e678b5",
-    "url": "/Evaly/static/css/main.c1b2775f.chunk.css"
+    "revision": "4646a1b12da58fbd8e81",
+    "url": "/Evaly/static/css/main.332116c2.chunk.css"
   },
   {
-    "revision": "886a0b5b33a86774bba3",
-    "url": "/Evaly/static/js/2.93969681.chunk.js"
+    "revision": "a697a88fc25a88a45888",
+    "url": "/Evaly/static/js/2.60c414fc.chunk.js"
   },
   {
-    "revision": "3a5359d431b8190dc2f36e4703f39768",
-    "url": "/Evaly/static/js/2.93969681.chunk.js.LICENSE.txt"
+    "revision": "d2966845b94a3318bf32eecc7af8015d",
+    "url": "/Evaly/static/js/2.60c414fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1da3c65bb81390e678b5",
-    "url": "/Evaly/static/js/main.1a0b2689.chunk.js"
+    "revision": "4646a1b12da58fbd8e81",
+    "url": "/Evaly/static/js/main.ee09b97c.chunk.js"
   },
   {
     "revision": "c00f3b49474f18e0cf8a",
