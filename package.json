@@ -1,6 +1,6 @@
 {
   
-  "homepage":"https://sofianeherin21.github.io/Evaly", 
+  "homepage":"https://sofianeherin21.github.io/Evaly",
   "name": "evaly",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
   "scripts": {
     
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+	"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
