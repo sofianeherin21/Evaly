@@ -12,7 +12,20 @@ import { Highlights } from '../shared/Highlights';
 import { SHOPS } from '../shared/Shops';
 import { PRODUCTS } from '../shared/Products';
 import { AllShops } from '../shared/AllShops';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+  return {
+    lists:state.lists,
+	ads:state.ads,
+	highlights:state.highlights,
+	shops:state.shops,
+	products:state.products,
+	allshops: state.allshops
+  }
+}
+
 
 class Main extends Component {
 
@@ -39,11 +52,11 @@ class Main extends Component {
 	  }
 
 	toggleDrop() {
-		this.setState({dropdownOpen: !this.state.dropdownOpen});
+		this.setprops({dropdownOpen: !this.state.dropdownOpen});
 	}
 
 	onShopSelect(shop){
-		this.setState({selectedShop:shop});
+		this.setprops({selectedShop:shop});
 	}
 
 
@@ -53,17 +66,17 @@ class Main extends Component {
 
 	  	const ShopWithId = ({match}) => {
 	      return(
-	          <ShopDetail shop={this.state.allshops.filter((shop) => shop.id === parseInt(match.params.shopId,10))[0]} products={this.state.products} lists={this.state.lists}  />
+	          <ShopDetail shop={this.props.allshops.filter((shop) => shop.id === parseInt(match.params.shopId,10))[0]} products={this.props.products} lists={this.props.lists}  />
 	      );
 	    };
 
 	  	return (
 		    <div>
-		      <Header lists={this.state.lists}/>
+		      <Header lists={this.props.lists}/>
 			      <Switch>
-		              <Route path='/home' component={()=> <Home lists={this.state.lists}  ads={this.state.ads} items={this.state.highlights} shops={this.state.shops} products={this.state.products}/>} />
-		              <Route exact path='/products' component={() => <Product products={this.state.products} />} />
-		              <Route exact path='/shops' component={()=> <ShopComponent allshops={this.state.allshops}/>}/>
+		              <Route path='/home' component={()=> <Home lists={this.props.lists}  ads={this.props.ads} items={this.props.highlights} shops={this.props.shops} products={this.props.products}/>} />
+		              <Route exact path='/products' component={() => <Product products={this.props.products} />} />
+		              <Route exact path='/shops' component={()=> <ShopComponent allshops={this.props.allshops}/>}/>
 		              <Route path='/shops/:shopId' component={ShopWithId} />
 		              
 		              <Redirect to="/home" />
@@ -77,4 +90,4 @@ class Main extends Component {
   
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
