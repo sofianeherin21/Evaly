@@ -72,7 +72,7 @@ render()
                         	<Link to='/home'>
 
 	                            
-	                                <img src="assets/img/logo.png" height="70" width="90" className="p-2 " alt="logo" />
+	                                <img src="/assets/img/logo.png" height="70" width="90" className="p-2 " alt="logo" />
 	                            
                             </Link>
                             

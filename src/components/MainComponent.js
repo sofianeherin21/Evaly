@@ -33,32 +33,7 @@ class Main extends Component {
 	  {
 	    super(props);
 
-	    this.toggleDrop = this.toggleDrop.bind(this);
-
-
-	    this.state=
-	    {
-	      lists:CATEGORIES,
-	      ads:ADS,
-	      highlights:Highlights,
-	      shops:SHOPS,
-	      products:PRODUCTS,
-	      allshops: AllShops,
-
-	      dropdownOpen: false,
-		  selectedShop: null,
-		  selectedProd:null
-	    };
 	  }
-
-	toggleDrop() {
-		this.setprops({dropdownOpen: !this.state.dropdownOpen});
-	}
-
-	onShopSelect(shop){
-		this.setprops({selectedShop:shop});
-	}
-
 
 
 

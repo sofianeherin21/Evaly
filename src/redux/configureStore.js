@@ -1,10 +1,21 @@
-import {createStore} from 'redux';
-import { Reducer, initialState } from './reducer'
+import {createStore,combineReducers} from 'redux';
+import { Categories } from './categories';
+import { Ads } from './ads';
+import { highlights } from './highlights';
+import { Shops } from './shops';
+import { Products } from './products';
+import { allshops } from './allshops';
 
 export const ConfigureStore = () => {
     const store = createStore(
-        Reducer, // reducer
-        initialState, // our initialState
+        combineReducers({
+              lists:Categories,
+		      ads:Ads,
+		      highlights:highlights,
+		      shops:Shops,
+		      products:Products,
+		      allshops: allshops
+        }) 
     );
 
     return store;
