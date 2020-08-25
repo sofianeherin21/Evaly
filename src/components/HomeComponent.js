@@ -3,6 +3,7 @@ import Product from './ProductComponent';
 import { ListGroup, ListGroupItem,Card,CardBody,CardImg } from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
+import { Loading } from './LoadingComponent';
 
 
 class Home extends Component{
@@ -68,8 +69,27 @@ class Home extends Component{
 
 	
 		
-
-		return(
+		if (this.props.isLoading) {
+            return(
+                <div className="container">
+                    <div className="row">            
+                        <Loading />
+                    </div>
+                </div>
+            );
+        }
+        else if (this.props.errMess) {
+            return(
+                <div className="container">
+                    <div className="row">            
+                        <h4>{this.props.errMess}</h4>
+                    </div>
+                </div>
+            );
+        }
+        else if (this.props.ads != null)
+		{
+			return(
 
 			<React.Fragment>
 
@@ -112,8 +132,8 @@ class Home extends Component{
 
 	        	
 	        </React.Fragment>
-
-		);
+	        );
+		}
 
 	}
 

@@ -12,12 +12,18 @@
    
 }
 #prodetail img{
+    padding-top: 15%;
      padding-left: 10%;
      padding-right: 10%;
+     height: 80%;
      overflow: hidden;
 
 }
-.link{
+
+a{
+    color: inherit;
+    position: relative;
+    min-height: 0;
     padding: 0;
     margin:0;
 }
@@ -51,11 +57,13 @@
 }
 #product{
         
-    height: 20rem;
+    height: auto;
     padding: 0px;
+    width: auto;
 }
-a {
-    color: inherit;
+#prodetail .row{
+min-height: 500px;
+
 }
 
 .red-border {
@@ -93,7 +101,9 @@ a {
     height: 100%;
     width: 100%;
 }
-
+.card-body{
+    height: auto;
+}
 .footer {
     
     padding-top: 5em;
@@ -140,7 +150,9 @@ body {
     margin: 0em 1em;
 }
 
-
+#product .card-img{
+        height: 13%;
+    }
 
 
 /*small screen*/
@@ -194,16 +206,14 @@ body {
         padding-left: 0px
 
     }
-    #product h6,h5,p{
+    h1,h2,h3,h4,h6,h5,p{
         font-size: 12px;
     }
     #product{
         max-height: 10em;
         overflow: hidden;
     }
-    #product img{
-        height: 15%;
-    }
+    
         
 
 }

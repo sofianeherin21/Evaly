@@ -21,20 +21,23 @@ class Product extends Component{
 	}
 
 
-	renderItem(items){
+	renderItem(items,id){
 		
 		if(items)
 		{
 			const pro=items.map((item)=>{
 				return(
+					
 					<Card key={item.id} onClick={()=>this.onProdSelect(item)} id="product" className="col-6 col-md-3">
-						
-						<CardBody>
-							<CardImg style={{height:"70%"}} src={item.img} className="card-top img-responsive img-fluid" alt={item.name}/>
-							<CardTitle><h6>{item.name}</h6></CardTitle>
-							<p>৳{item.price}</p>
-						</CardBody>
+						<Link to={`/products/${id}/${item.id}`}>
+							<CardBody>
+								<CardImg src={item.img} className="card-top" alt={item.name}/>
+								<CardTitle><h6>{item.name}</h6></CardTitle>
+								<p>৳{item.price}</p>
+							</CardBody>
+						</Link>
 					</Card>
+					
 					);
 			});
 			return(
@@ -59,7 +62,7 @@ class Product extends Component{
 
 				<div key={product.id} className="container">
 					<h3>{product.category}</h3>
-					{this.renderItem(product.items)}
+					{this.renderItem(product.items,product.id)}
 				</div>
 
 
@@ -72,7 +75,7 @@ class Product extends Component{
 		        		{products}
 		        	</div>
 		        </div>
-		        <ProductDetail product={this.state.selectedProduct}/>
+		        
 	        </React.Fragment>
 
 

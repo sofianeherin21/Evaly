@@ -1,10 +1,13 @@
-import {createStore,combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware } from 'redux';
 import { Categories } from './categories';
 import { Ads } from './ads';
 import { highlights } from './highlights';
 import { Shops } from './shops';
 import { Products } from './products';
 import { allshops } from './allshops';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+
 
 export const ConfigureStore = () => {
     const store = createStore(
@@ -15,8 +18,10 @@ export const ConfigureStore = () => {
 		      shops:Shops,
 		      products:Products,
 		      allshops: allshops
-        }) 
+        }),
+        applyMiddleware(thunk, logger) 
     );
+    
 
     return store;
 }

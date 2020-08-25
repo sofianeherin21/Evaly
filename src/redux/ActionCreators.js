@@ -1,35 +1,27 @@
 import * as ActionTypes from './ActionTypes';
-import { DISHES } from '../shared/dishes';
+import { ADS } from '../shared/Ads';
 
-export const addComment = (dishId, rating, author, comment) => ({
-    type: ActionTypes.ADD_COMMENT,
-    payload: {
-        dishId: dishId,
-        rating: rating,
-        author: author,
-        comment: comment
-    }
-});
 
-export const fetchDishes = () => (dispatch) => {
 
-    dispatch(dishesLoading(true));
+export const fetchAds = () => (dispatch) => {
+
+    dispatch(adsLoading(true));
 
     setTimeout(() => {
-        dispatch(addDishes(DISHES));
+        dispatch(addAds(ADS));
     }, 2000);
 }
 
-export const dishesLoading = () => ({
-    type: ActionTypes.DISHES_LOADING
+export const adsLoading = () => ({
+    type: ActionTypes.ADS_LOADING
 });
 
-export const dishesFailed = (errmess) => ({
-    type: ActionTypes.DISHES_FAILED,
+export const adsFailed = (errmess) => ({
+    type: ActionTypes.ADS_FAILED,
     payload: errmess
 });
 
-export const addDishes = (dishes) => ({
-    type: ActionTypes.ADD_DISHES,
-    payload: dishes
+export const addAds = (ads) => ({
+    type: ActionTypes.ADD_ADS,
+    payload: ads
 });
