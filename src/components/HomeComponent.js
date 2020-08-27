@@ -4,6 +4,7 @@ import { ListGroup, ListGroupItem,Card,CardBody,CardImg } from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 
 class Home extends Component{
@@ -24,7 +25,7 @@ class Home extends Component{
 		const carousel = this.props.ads.map((ad)=>{
 
 			return(
-					<img key={ad.id} src={ad.img} className="sliderimg img-responsive img-fluid" alt={ad.name}/>
+					<img key={ad.id} src={baseUrl+ad.img} className="sliderimg img-responsive img-fluid" alt={ad.name}/>
 				);
 		});
 

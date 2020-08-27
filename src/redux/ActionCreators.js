@@ -1,15 +1,15 @@
 import * as ActionTypes from './ActionTypes';
-import { ADS } from '../shared/Ads';
 
+import { baseUrl } from '../shared/baseUrl';
 
 
 export const fetchAds = () => (dispatch) => {
 
     dispatch(adsLoading(true));
 
-    setTimeout(() => {
-        dispatch(addAds(ADS));
-    }, 2000);
+    return fetch(baseUrl + 'ads')
+    .then(response => response.json())
+    .then(ads => dispatch(addAds(ads)));
 }
 
 export const adsLoading = () => ({
