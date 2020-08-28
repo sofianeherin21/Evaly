@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import { CardBody,CardImg,CardTitle } from 'reactstrap';
+import { CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import { Loading } from './LoadingComponent';
+import { baseUrl} from '../shared/baseUrl'
 
 class ShopComponent extends Component{
 
@@ -30,7 +32,7 @@ class ShopComponent extends Component{
 						<Link to={`/shops/${item.id}`}>
 						<div className="flex-wrap overflow-hidden">
 							<div className="d-flex p-2 justify-content-center">
-								<img style={{width:"auto"},{height:"10rem"}} src={item.logo} className="card-top img-responsive img-fluid" alt={item.name}/>
+								<img style={{width:"auto"},{height:"10rem"}} src={baseUrl+item.logo} className="card-top img-responsive img-fluid" alt={item.name}/>
 							</div>
 							<div className="p-3 overflow-hidden">
 								<CardTitle><h6>{item.name}</h6></CardTitle>
@@ -58,8 +60,26 @@ class ShopComponent extends Component{
 
 	render()
 	{
-		
-		return(
+		if (this.props.isLoading) {
+            return(
+                <div className="container">
+                    <div className="row">            
+                        <Loading />
+                    </div>
+                </div>
+            );
+        }
+        else if (this.props.errMess) {
+            return(
+                <div className="container">
+                    <div className="row">            
+                        <h4>{this.props.errMess}</h4>
+                    </div>
+                </div>
+            );
+        }
+		else if(this.props.allshops!=null)
+		{return(
 			<React.Fragment>
 				<div className="container">
 		        	<div className="flex-row p-2 justify-content-center">
@@ -72,7 +92,7 @@ class ShopComponent extends Component{
 	        </React.Fragment>
 
 
-		);
+		);}
 	}	
 
 }

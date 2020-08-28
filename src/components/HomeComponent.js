@@ -13,7 +13,7 @@ class Home extends Component{
 	render()
 	{
 
-		const category = this.props.lists.map((cat) =>{
+		const category = this.props.categories.map((cat) =>{
 					
 					return(
 						<ListGroupItem key={cat.id}>{cat.name} <span className="fa fa-angle-right pull-right"></span></ListGroupItem>
@@ -40,7 +40,7 @@ class Home extends Component{
 
 		                            <p>{item.brand}<span className="badge badge-primary"> NEW</span></p>
 		                            <h6 className="card-title text-md">{item.name}</h6>
-		                            <CardImg style={{height:"20%"},{padding:"0"},{width:"20%"}} className="ml-auto img-responsive img-fluid" src={item.img}/>
+		                            <CardImg style={{height:"20%"},{padding:"0"},{width:"20%"}} className="ml-auto img-responsive img-fluid" src={baseUrl+item.img}/>
 		                            <p className="col-5 text-sm text-gray-600">{item.category}<br/>
 		                    	        Starting at<br/>
 		                        	    ৳ {item.price}
@@ -62,7 +62,7 @@ class Home extends Component{
 		return(
 
 				<div key={shop.id} id="shops" className="col-4 col-md-2 row-content">
-	                <img src={shop.img} className="img-responsive img-fluid" alt="shops"/>
+	                <img src={baseUrl+shop.img} className="img-responsive img-fluid" alt="shops"/>
 	            </div>
 
 			);

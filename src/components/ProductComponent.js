@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Card,CardBody,CardImg,CardTitle } from 'reactstrap';
-import ProductDetail from './ProductDetailsComponent';
 import { Link } from 'react-router-dom'
+import { baseUrl } from '../shared/baseUrl';
 
 class Product extends Component{
 
@@ -31,7 +31,7 @@ class Product extends Component{
 					<Card key={item.id} onClick={()=>this.onProdSelect(item)} id="product" className="col-6 col-md-3">
 						<Link to={`/products/${id}/${item.id}`}>
 							<CardBody>
-								<CardImg src={item.img} className="card-top" alt={item.name}/>
+								<CardImg src={baseUrl+item.img} className="card-top" alt={item.name}/>
 								<CardTitle><h6>{item.name}</h6></CardTitle>
 								<p>৳{item.price}</p>
 							</CardBody>

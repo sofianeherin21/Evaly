@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Card,Dropdown,DropdownItem,DropdownToggle,DropdownMenu,Button } from 'reactstrap';
+import {baseUrl} from '../shared/baseUrl'
 
 class ProductDetail extends Component{
 
@@ -31,7 +32,7 @@ class ProductDetail extends Component{
 						<div className="container" id="prodetail">
 							<div className="row">
 								<div className="col-12 col-sm-6">
-									<img src={prod.img} className="img-fluid" alt={prod.name}/>
+									<img src={baseUrl+prod.img} className="img-fluid" alt={prod.name}/>
 								</div>
 								<div className="col col-sm">
 									<h1>{prod.name}</h1>

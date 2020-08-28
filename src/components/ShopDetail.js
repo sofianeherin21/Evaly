@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { ListGroup, ListGroupItem,Card,CardBody,CardImg,Button } from 'reactstrap';
+import { ListGroup, ListGroupItem,Button } from 'reactstrap';
 import Product from './ProductComponent';
+import {baseUrl} from '../shared/baseUrl'
 
 class ShopDetail extends Component{
 
@@ -11,12 +12,12 @@ class ShopDetail extends Component{
 
 					<div className="d-md-flex flex-sm-col flex-md-row mt-5 ">
 						<div className="w-full mr-4 rounded-lg mx-lg:mb-4 lg:w-8/12 xl:w-9/12">
-							<img src={shop.img} className="img-fluid" alt="cover"/>
+							<img src={baseUrl+shop.img} className="img-fluid" alt="cover"/>
 						</div>
 						<div className="d-md-flex flex-md-row w-full bg-white rounded-lg lg:w-4/12 xl:w-3/1">
 							<div className="p-4 flex">
 								<div className="d-inline-flex mt-2">
-									<img src={shop.logo} width="80em" className="img-responsive overflow-hidden" alt="logo"/>
+									<img src={baseUrl+shop.logo} width="80em" className="img-responsive overflow-hidden" alt="logo"/>
 								</div>
 								<div className="flex-1">
 									<div className="flex justify-between">
@@ -57,7 +58,7 @@ class ShopDetail extends Component{
 
 	render(){
 
-		const category = this.props.lists.map((cat) =>{
+		const category = this.props.categories.map((cat) =>{
 					
 					return(
 						<ListGroupItem key={cat.id}>{cat.name} <span className="fa fa-angle-right pull-right"></span></ListGroupItem>

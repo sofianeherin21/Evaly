@@ -12,7 +12,7 @@ import logger from 'redux-logger';
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-              lists:Categories,
+              categories:Categories,
 		      ads:Ads,
 		      highlights:highlights,
 		      shops:Shops,
