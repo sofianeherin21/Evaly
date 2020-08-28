@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Navbar, Nav,NavItem,Button, Input,Popover,PopoverHeader, PopoverBody} from 'reactstrap';
+import {Navbar, Nav,NavItem,Button, Input,Popover,PopoverHeader, PopoverBody,Modal, ModalHeader, ModalFooter, ModalBody,ListGroup,ListGroupItem } from 'reactstrap';
 import {POPS} from '../shared/Popovers.js'; 
 import { NavLink,Link } from 'react-router-dom';
+import {baseUrl} from '../shared/baseUrl'
 
 class Header extends Component {
 
@@ -10,8 +11,10 @@ class Header extends Component {
 
         this.toggleNav = this.toggleNav.bind(this);
         this.togglePopover = this.togglePopover.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
 
         this.state = {
+            isModalOpen: false,
             isNavOpen: false,
             isPopoverOpen: false,
             pops:POPS,
@@ -19,6 +22,14 @@ class Header extends Component {
         };
 
     }
+
+
+     toggleModal() {
+        this.setState({
+          isModalOpen: !this.state.isModalOpen
+        });
+      }
+
 
     toggleNav() {
         this.setState({
@@ -72,7 +83,7 @@ render()
                         	<Link to='/home'>
 
 	                            
-	                                <img src="/assets/img/logo.png" height="70" width="90" className="p-2 " alt="logo" />
+	                                <img src={baseUrl+"img/logo.png"} height="70" width="90" className="p-2 " alt="logo" />
 	                            
                             </Link>
                             
@@ -132,7 +143,7 @@ render()
 	                    <Navbar light expand="sm" className="col-10" >
 	                        <Navbar expand="sm" className="list-unstyled">
 
-	                        	<Button className="navbar-light btn-default" type="button"><span className="navbar-toggler-icon"></span></Button>
+	                        	<Button className="navbar-light btn-default" type="button" onClick={this.toggleModal}><span className="navbar-toggler-icon"></span></Button>
 	                            <NavItem ><NavLink className="nav-link" to='/shops'> All Shops</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link" to='/gifts' > Gift Cards</NavLink></NavItem>
 	                            <NavItem ><NavLink className="nav-link" to='/campaigns' > Campaigns</NavLink></NavItem>
@@ -147,6 +158,41 @@ render()
 
 
             </div>
+
+            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+
+                    <ModalHeader toggle={this.toggleModal}>
+                        <img src={baseUrl+"img/logo.png"}/>
+                    </ModalHeader>
+                    <ModalBody>
+                        <div class="subdiv">
+                            <div class="flex-item">Balance</div>
+                            <div class="flex-item">
+                                <Button block className="btn-danger">Login</Button>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <ListGroup>
+                                <ListGroupItem>Shops<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>Evaly Express Shops<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>newsFeed<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>Gift Card<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>Campaigns<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>Orders<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                                <ListGroupItem>Vouchers<span className="fa fa-angle-right pull-right"></span></ListGroupItem>
+                            </ListGroup>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    
+                    </ModalBody>
+                </Modal>
 
         </React.Fragment>);
     }

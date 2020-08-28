@@ -1,3 +1,42 @@
+.modal{
+    height: 100%;
+    width: 350px;
+    box-sizing: border-box;
+    overflow-y:scroll;
+    margin-top: 0px;
+    left: 0px;
+
+}
+.modal-dialog{
+    margin: 0px;
+    height: 130%;
+    overflow: wrap;
+    padding-bottom: 0rem;
+}
+.modal-content{
+    height: 100%;
+}
+.modal img{
+
+    height: 4rem;
+    width: 6rem;
+}
+.subdiv{
+    position: relative;
+    box-shadow: 0px 1px  #D5D8D5;
+    margin-bottom: 2rem;
+    padding: 0.75rem;
+}
+.flex-item{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.options{
+    margin-bottom: 2rem;
+}
 .lukao{
     z-index: 50;
     padding-left:1rem;

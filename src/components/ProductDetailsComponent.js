@@ -14,6 +14,9 @@ class ProductDetail extends Component{
 			dropValue:'1'
 		}
 	}
+	
+
+	
 	toggleDrop() {
 		this.setState({dropdownOpen: !this.state.dropdownOpen});
 	}

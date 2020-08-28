@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Product from './ProductComponent';
-import { ListGroup, ListGroupItem,Card,CardBody,CardImg } from 'reactstrap';
+import { ListGroup, ListGroupItem,Card,CardBody,CardImg} from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Loading } from './LoadingComponent';
@@ -9,6 +9,9 @@ import { baseUrl } from '../shared/baseUrl';
 
 class Home extends Component{
 	
+	
+
+
 
 	render()
 	{
@@ -130,6 +133,7 @@ class Home extends Component{
 	        		</div>
 	        	</div>
 	        	<Product products={this.props.products}/>
+	        	
 
 	        	
 	        </React.Fragment>

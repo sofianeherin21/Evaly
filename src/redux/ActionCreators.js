@@ -9,8 +9,22 @@ export const fetchAds = () => (dispatch) => {
     dispatch(adsLoading(true));
 
     return fetch(baseUrl + 'ads')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(ads => dispatch(addAds(ads)));
+    .then(ads => dispatch(addAds(ads)))
+    .catch(error => dispatch(adsFailed(error.message)));
 }
 
 export const adsLoading = () => ({
@@ -36,8 +50,22 @@ export const fetchHighlights = () => (dispatch) => {
     dispatch(highlightsLoading(true));
 
     return fetch(baseUrl + 'highlights')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(highlights => dispatch(addHighlights(highlights)));
+    .then(highlights => dispatch(addHighlights(highlights)))
+    .catch(error => dispatch(highlightsFailed(error.message)));
 }
 
 export const highlightsLoading = () => ({
@@ -63,8 +91,22 @@ export const fetchCategories = () => (dispatch) => {
     dispatch(categoriesLoading(true));
 
     return fetch(baseUrl + 'categories')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(categories => dispatch(addCategories(categories)));
+    .then(categories => dispatch(addCategories(categories)))
+    .catch(error => dispatch(categoriesFailed(error.message)));
 }
 
 export const categoriesLoading = () => ({
@@ -91,8 +133,22 @@ export const fetchProducts = () => (dispatch) => {
     dispatch(productsLoading(true));
 
     return fetch(baseUrl + 'products')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(products => dispatch(addProducts(products)));
+    .then(products => dispatch(addProducts(products)))
+    .catch(error => dispatch(productsFailed(error.message)));
 }
 
 export const productsLoading = () => ({
@@ -117,8 +173,22 @@ export const fetchShops = () => (dispatch) => {
     dispatch(shopsLoading(true));
 
     return fetch(baseUrl + 'shops')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(shops => dispatch(addShops(shops)));
+    .then(shops => dispatch(addShops(shops)))
+    .catch(error => dispatch(shopsFailed(error.message)));
 }
 
 export const shopsLoading = () => ({
@@ -143,8 +213,22 @@ export const fetchAllShops = () => (dispatch) => {
     dispatch(allshopsLoading(true));
 
     return fetch(baseUrl + 'allshops')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
     .then(response => response.json())
-    .then(allshops => dispatch(addAllShops(allshops)));
+    .then(allshops => dispatch(addAllShops(allshops)))
+    .catch(error => dispatch(allshopsFailed(error.message)));
 }
 
 export const allshopsLoading = () => ({
